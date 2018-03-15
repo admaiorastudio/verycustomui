@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:VeryCustomUI.Common"
+             xmlns:controls="clr-namespace:VeryCustomUI.Controls"             
+             x:Class="VeryCustomUI.Views.HeaderBar">
+    <ContentView.Content>
+        <Grid 
+            HorizontalOptions="Fill"
+            VerticalOptions="Start"
+            HeightRequest="60"
+            RowSpacing="0" 
+            ColumnSpacing="0"
+            BackgroundColor="#30BCED">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <controls:FontAwesomeButton
+                Grid.Column="0"
+                WidthRequest="48"
+                HeightRequest="48"
+                BackgroundColor="Transparent"
+                Text="{x:Static common:FontAwesome.FAArrowLeft}"
+                TextColor="#FFF"
+                FontSize="22"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                IsVisible="{Binding IsBackVisible}"
+                Command="{Binding BackCommand}"/>
+            <Label 
+                Grid.Column="1"
+                Margin="0,0,0,8"
+                Text="{Binding Title}"
+                TextColor="#FFF"
+                FontAttributes="Bold"
+                FontSize="22"
+                HorizontalOptions="Center"
+                VerticalOptions="End"/>
+            <controls:FontAwesomeButton
+                Grid.Column="2"
+                WidthRequest="48"
+                HeightRequest="48"
+                BackgroundColor="Transparent"
+                Text="{Binding ActionIcon}"
+                TextColor="#FFF"
+                FontSize="22"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                IsVisible="{Binding IsActionVisible}"
+                Command="{Binding ActionCommand}"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

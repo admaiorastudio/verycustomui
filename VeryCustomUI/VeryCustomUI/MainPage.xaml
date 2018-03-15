@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:VeryCustomUI.Common"
+             xmlns:controls="clr-namespace:VeryCustomUI.Controls"
+             xmlns:views="clr-namespace:VeryCustomUI.Views"
+             x:Class="VeryCustomUI.MainPage"
+             Title="Home">
+    <ContentPage.Content>
+        <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <views:HeaderBar 
+                x:Name="HeaderBar"
+                Grid.Row="0"/>
+            <Grid Margin="8" Grid.Row="1">
+                <Label                    
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Text="Your content here!"
+                    TextColor="#515151"
+                    FontSize="24"/>
+                <Button                    
+                    HorizontalOptions="Center"
+                    BackgroundColor="#FC5130"
+                    VerticalOptions="End"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    Text="GO TO NEW PAGE"
+                    FontSize="20"                    
+                    TextColor="#FFF"
+                    Command="{Binding GoToCommand}"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

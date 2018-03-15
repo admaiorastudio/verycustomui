@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:common="clr-namespace:VeryCustomUI.Common"
+             xmlns:controls="clr-namespace:VeryCustomUI.Controls"
+             xmlns:views="clr-namespace:VeryCustomUI.Views"             
+             x:Class="VeryCustomUI.SecondaryPage"
+             Title="Secondary">
+    <ContentPage.Content>
+        <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <views:HeaderBar 
+                x:Name="HeaderBar"
+                Grid.Row="0"/>
+            <Grid 
+                Grid.Row="1"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill">
+                
+                <Label 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    FontSize="24"
+                    Text="12,00 €"
+                    TextColor="#515151"/>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
