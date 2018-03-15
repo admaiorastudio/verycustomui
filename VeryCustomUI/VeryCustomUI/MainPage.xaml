@@ -11,7 +11,7 @@
             HorizontalOptions="Fill"
             VerticalOptions="Fill">
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <views:HeaderBar 
@@ -28,7 +28,7 @@
                     HorizontalOptions="Center"
                     BackgroundColor="#FC5130"
                     VerticalOptions="End"
-                    WidthRequest="200"
+                    WidthRequest="300"
                     HeightRequest="60"
                     Text="GO TO NEW PAGE"
                     FontSize="20"                    

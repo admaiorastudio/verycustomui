@@ -11,7 +11,7 @@
             HorizontalOptions="Fill"
             VerticalOptions="Fill">
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
+                <RowDefinition Height="80"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <views:HeaderBar 
@@ -21,13 +21,10 @@
                 Grid.Row="1"
                 HorizontalOptions="Fill"
                 VerticalOptions="Fill">
-                
-                <Label 
+                <views:StrikeLabel
                     HorizontalOptions="Center"
                     VerticalOptions="Center"
-                    FontSize="24"
-                    Text="12,00 €"
-                    TextColor="#515151"/>
+                    Text="12,00 €"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

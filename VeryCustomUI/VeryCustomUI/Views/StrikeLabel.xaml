@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VeryCustomUI.Views.StrikeLabel"
+             x:Name="this">
+  <ContentView.Content>
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Center">
+            <Label 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="32"
+                Text="{Binding Text, Source={x:Reference this}}"
+                TextColor="#515151"/>
+            <BoxView
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"
+                Margin="4,8,4,0"
+                HeightRequest="3"
+                BackgroundColor="#515151"/>
+        </Grid>
+  </ContentView.Content>
+</ContentView>
